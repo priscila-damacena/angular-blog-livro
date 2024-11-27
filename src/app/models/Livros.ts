@@ -1,7 +1,8 @@
-export class Livros{
-  titulo:string | undefined;
-  genero:string | undefined;
-  qtdePagina:number | undefined;
-  autor:string | undefined;
-  imagem:string | undefined;
+export interface Livros{
+  id:number ;
+  titulo:string ;
+  genero:string ;
+  qtdePagina:number ;
+  autor:string ;
+  imagem:string ;
 }

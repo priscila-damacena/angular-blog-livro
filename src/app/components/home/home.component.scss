@@ -42,3 +42,19 @@ img {
   align-items: center;
   margin: 1em 25%;
 }
+
+.txtTitulo{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-size: 2em;
+}
+
+.txtUsuario{
+  font-size: 1em;
+}
+
+.txtResenha{
+  text-align: center;
+}
+

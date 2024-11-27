@@ -1,10 +1,13 @@
 
 
-<div *ngFor="let li of livros" class="card personalizado">
+<div *ngFor="let p of publicacoes" class="card personalizado">
   <div class="container ">
-    <h4><b>{{li.titulo}}</b></h4>
-    <p >Autor: {{li.autor}}</p>
-    <p>Genero: {{li.genero}}</p>
-    <p>Paginas: {{li.qtdePagina}}</p>
+    <p class="txtUsuario">{{p.usuario?.nome}}</p>
+    <p class="txtTitulo"><b>{{p.livro?.titulo}}</b></p>
+    <p class="txtAutor">Autor: {{p.livro?.autor}}</p>
+    <p class="txtGenero">Genero: {{p.livro?.genero}}</p>
+    <p class="txtPaginas">Paginas: {{p.livro?.qtdePagina}}</p>
+    <p class="txtResenha">Resenha:</p>
+    <p class="txtResenha">{{p.resenha}}</p>
   </div>
 </div>

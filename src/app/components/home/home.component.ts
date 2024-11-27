@@ -12,6 +12,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatListModule} from '@angular/material/list';
 import { HttpClient } from '@angular/common/http';
+import { Publicacoes } from '../../models/Publicacoes';
 
 @Component({
   selector: 'app-home',
@@ -33,7 +34,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class HomeComponent implements OnInit {
-  public livros: Livros[] = [];
+  public publicacoes: Publicacoes[] = [];
   private _livroService :  LivroService;
 
   constructor( httpclient : HttpClient) {
@@ -42,16 +43,16 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.getLivros();
+    this.getPublicacoes();
   }
 
 
 
 
-  private getLivros() {
-    this._livroService.getLIvros().subscribe(data => {
-      this.livros = data;
-    console.log(this.livros)
+  private getPublicacoes() {
+    this._livroService.getPublicacoes().subscribe(data => {
+      console.log(data);
+      this.publicacoes = data;
 
     });
 

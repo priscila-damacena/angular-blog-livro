@@ -1,0 +1,41 @@
+<div style="text-align: center;">
+  <h5>Cadastro de Livro</h5>
+</div>
+  <div style="text-align: center;">
+  <form   [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div>
+    <mat-form-field>
+      <mat-label>Livro:</mat-label>
+      <mat-select formControlName="livro" name="livro">
+        @for (livro of livros; track livros) {
+          <mat-option matInput [value]="livro.id">{{livro.titulo}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <div>
+
+    <mat-form-field style="width: 25em;" >
+      <label for="autor">Resenha: </label>
+      <textarea  matInput  cols="40" rows="5" style="height: 20em; "  formControlName="resenha" type="text" required></textarea>
+    </mat-form-field>
+  </div>
+
+  <div style="text-align: center;">
+      <input  type="button"  type="submit" value="Cadastrar"/>
+    </div>
+  </form>
+    <strong>{{message}}</strong>
+</div>
+
+
+
+
+
+
+
+
+
+

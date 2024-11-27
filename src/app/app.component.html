@@ -1,8 +1,12 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav mode="side"  [(opened)]="opened">
   <p><b>Blog Books</b></p>
-  <button mat-button routerLink="/home" >Home</button>
-  <button mat-button routerLink="/login">Login</button>
+  <button mat-button routerLink="/home"  >Home</button>
+  <button mat-button routerLink="/cadastro" *ngIf="logado" >Cadastro Livro</button>
+  <button mat-button routerLink="/cadastroResenha" *ngIf="logado" >Cadastro Resenha</button>
+  <button mat-button routerLink="/login" *ngIf="!logado">Login</button>
+  <button mat-button routerLink="/cadastroLogin"  *ngIf="!logado">cadastro</button>
+  <button mat-button routerLink="/deslogar"  *ngIf="logado">sair</button>
  </mat-sidenav>
   <mat-sidenav-content><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="menu" (click)="changemenu()"></mat-icon><router-outlet></router-outlet> </mat-sidenav-content>
 </mat-sidenav-container>
